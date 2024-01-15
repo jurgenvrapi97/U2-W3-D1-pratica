@@ -17,7 +17,9 @@ class Pet {
   sameOwner(otherPet) {
     if (this.owenerName === otherPet.owenerName) {
       return true
-    } else return false
+    } else {
+      return false
+    }
   }
 }
 
@@ -62,9 +64,11 @@ formReference.addEventListener('submit', function (e) {
 
   for (i = 0; i < pets.length; i++) {
     if (newPet.sameOwner(pets[i]) === true) {
+      console.log('stesso proprietario')
     }
-    console.log('stesso proprietario')
+    console.log(pets.length)
   }
+
   pets.push(newPet)
 
   fillRowWithCards()
